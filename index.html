@@ -8,49 +8,134 @@
   </head>
   <body>
     <header>
+      <div class="logo">
+        <img src="/assets/revou-png.png" alt="revou" />
+      </div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="profile.html">Our Profile</a></li>
-          <li><a href="#">Achievement</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#profile">Our Profile</a></li>
+          <li><a href="#vision-mission">Visi Misi</a></li>
           <li><a href="#message">Message Us</a></li>
         </ul>
       </nav>
     </header>
-
-    <section class="banner">
-      <h1>Hi <span id="user-name">Guest</span>, Welcome To Website</h1>
-      <p>Ini adalah website latihan pertama</p>
+    <!-- HOME -->
+    <section id="home">
+      <div id="popup" class="modal">
+        <div class="modal-content">
+          <p>Masukkan nama Anda:</p>
+          <input type="text" id="namaInput" placeholder="Nama Anda" />
+          <button onclick="simpanNama()">OK</button>
+        </div>
+      </div>
+      <h1 id="welcome">Hi!</h1>
     </section>
-
-    <section class="facilities">
-      <h2>Our Facilitation</h2>
-      <div class="facility-container">
-        <div class="facility-item">Professional Teacher</div>
-        <div class="facility-item">Sport Field</div>
-        <div class="facility-item">Classroom</div>
+    <!-- BANNER -->
+    <section id="banner">
+      <div class="slider-container">
+        <div class="slides">
+          <img src="/assets/pic1.jpg" alt="Gambar 1" />
+          <img src="/assets/pic2.jpg" alt="Gambar 2" />
+          <img src="/assets/pic3.jpg" alt="Gambar 2" />
+        </div>
       </div>
     </section>
+    <!-- PROFILE -->
+    <div class="container">
+      <!-- Profil Sekolah -->
+      <div id="profile">
+        <section class="section">
+          <div class="section-text">
+            <h2>Profil Sekolah</h2>
+            <p>
+              Selamat datang di <strong>Tech Academy</strong>, sebuah institusi pendidikan yang berkomitmen untuk mengembangkan sumber daya manusia di bidang teknologi digital. Kami menawarkan berbagai program pelatihan dan kurikulum yang
+              dirancang untuk membekali siswa dengan keterampilan yang dibutuhkan dalam industri teknologi yang terus berkembang.
+            </p>
+            <p>Dengan didukung oleh pengajar profesional dan fasilitas modern, kami berfokus pada penguasaan keterampilan seperti pemrograman, kecerdasan buatan, desain UI/UX, serta transformasi digital.</p>
+          </div>
+          <div class="section-image">
+            <img src="/assets/univ_building.jpg" alt="Profil Sekolah" />
+          </div>
+        </section>
+      </div>
+      <!-- Sejarah Sekolah -->
+      <div id="history">
+        <section class="section">
+          <div class="section-text">
+            <h2>Sejarah Sekolah</h2>
+            <p>
+              Tech Academy didirikan pada tahun 2010 dengan visi untuk mencetak talenta digital berkualitas tinggi. Berawal dari kursus kecil, kami berkembang menjadi institusi yang telah melatih ribuan siswa dalam berbagai bidang teknologi
+              digital.
+            </p>
+            <p>Seiring dengan pesatnya perkembangan industri digital, kami terus berinovasi dalam kurikulum dan metode pembelajaran agar dapat memenuhi kebutuhan pasar tenaga kerja yang semakin dinamis.</p>
+            <p>Kini, Tech Academy telah menjadi salah satu lembaga terkemuka dalam pendidikan teknologi digital di Indonesia, dengan lulusan yang bekerja di berbagai perusahaan teknologi besar.</p>
+          </div>
+          <div class="section-image">
+            <img src="/assets/history.jpg" alt="Sejarah Sekolah" />
+          </div>
+        </section>
+      </div>
+      <!-- Visi & Misi -->
+      <section id="vision-mission">
+        <h2>Visi & Misi</h2>
+        <div class="vision-mission-content">
+          <h3>Visi</h3>
+          <p>"Menjadi lembaga pendidikan terdepan dalam mencetak sumber daya manusia unggul di bidang teknologi digital, berorientasi pada inovasi dan keunggulan global."</p>
 
+          <h3>Misi</h3>
+          <ul class="vision-mission-list">
+            <li>Menyediakan kurikulum berbasis industri yang relevan dengan kebutuhan pasar kerja.</li>
+            <li>Mengembangkan keterampilan praktis melalui proyek nyata dan kolaborasi dengan perusahaan teknologi.</li>
+            <li>Menghadirkan pengajar berkualitas dengan pengalaman di dunia industri.</li>
+            <li>Mendorong inovasi dan kreativitas dalam pengembangan teknologi digital.</li>
+            <li>Membangun komunitas pembelajar yang saling mendukung dan berkembang bersama.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- MESSAGE-US -->
     <section id="message">
-      <h2>Message Us</h2>
-      <form id="message-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Submit</button>
+      <form id="message-form" action="" method="post">
+        <h2>Message Us</h2>
+        <div class="input-box">
+          <label for="name-input">Name:</label>
+          <input type="text" id="name-input" name="name" placeholder="ex. Andhika" />
+          <span class="error hidden" id="nameError">Nama harus diisi</span><br />
+        </div>
+        <div class="input-box">
+          <label for="birth-date">Tanggal Lahir:</label>
+          <input type="date" id="birth-date" name="birth-date" />
+          <span class="error hidden" id="dobError">Tanggal lahir harus diisi</span><br />
+        </div>
+        <div class="input-box">
+          <label for="gender">Jenis Kelamin:</label>
+          <label for="gender-a1">
+            <input type="radio" id="gender-a1" name="gender" value="Pria" />
+            Pria
+          </label>
+          <label for="gender-a2">
+            <input type="radio" id="gender-a2" name="gender" value="Wanita" />
+            Wanita
+          </label>
+          <span class="error hidden" id="genderError">Pilih gender</span><br />
+        </div>
+        <div class="input-box">
+          <label for="pesan">Message:</label>
+          <textarea id="pesan" name="pesan" required></textarea>
+          <span class="error hidden" id="messageError">Pesan harus diisi</span><br />
+        </div>
+        <button type="button" onclick="validateForm()">Submit</button>
       </form>
-
-      <div id="submitted-data"></div>
+      <!-- <div id="submitted-data"></div> -->
+      <div id="result" class="hidden">
+        <h3>Hasil Input:</h3>
+        <p><strong>Nama:</strong> <span id="resName"></span></p>
+        <p><strong>Tanggal Lahir:</strong> <span id="resDob"></span></p>
+        <p><strong>Gender:</strong> <span id="resGender"></span></p>
+        <p><strong>Pesan:</strong> <span id="resMessage"></span></p>
+      </div>
     </section>
 
     <script src="./js/script.js"></script>
