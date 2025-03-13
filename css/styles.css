@@ -26,6 +26,21 @@ header {
   z-index: 999;
 }
 
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+  nav ul {
+    font-size: 20px;
+  }
+  nav a:hover {
+    color: black;
+    transform: scale(1.3);
+  }
+}
+
 .logo img {
   height: 100px;
   aspect-ratio: 5/4;
@@ -56,8 +71,7 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-  background-color: black;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 nav a {
@@ -65,7 +79,8 @@ nav a {
   color: black;
 }
 nav a:hover {
-  color: white;
+  color: black;
+  transform: scale(1.2);
 }
 /* HOME */
 .modal {
@@ -121,6 +136,7 @@ button {
   flex-shrink: 0;
 }
 
+/* ---------------CONTENT-------------------------- */
 /* Profile */
 .container {
   width: 100%;
@@ -129,7 +145,6 @@ button {
   padding: 50px 20px;
 }
 
-/* Gaya umum untuk section */
 .section {
   background: #fff;
   padding: 30px;
@@ -255,6 +270,22 @@ h2 {
   height: 250px;
   border: 2px solid #333;
   padding: 10px;
+}
+
+@media (max-width: 768px) {
+  #message {
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  #message-form {
+    width: 95%;
+    margin: 0 0 20px 0;
+  }
+  #result {
+    width: 90%;
+    margin-bottom: 20px;
+  }
 }
 
 #message-form h2 {
